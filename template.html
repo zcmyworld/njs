@@ -3,27 +3,29 @@
 <head></head>
 
 <body>
-    <h1>
-        <njs value="title" />
-    </h1>
-    <h1>
-        <njs value="description" />
-    </h1>
-    <!-- <script njs="true">
-        for (let i = 0; i <= 3; i++) {
-            if (i = 0) {
-                nhtml(`<p>开始循环！</p>`);
-                break;
-            };
-            nhtml(`<p>第${i}次输出</p>`)
-        }
-    </script> -->
-    <!-- <n-foreach key="users" value="user">
-        <p>
-            <span>用户名：</span>
-            <njs value="user.name" />
-        </p>
-    </n-foreach> -->
+	<h1>
+		<njs value="title" />
+	</h1>
+	<h1>
+		<njs value="description" />
+	</h1>
+	<script njs="true">
+		for (let i = 0; i < 3; i++) {
+			if (i == 0) {
+				nhtml(`<p>开始输出</p>`)
+				continue;
+			};
+			nhtml(`<p>第${i}次输出</p>`)
+		}
+	</script>
+
+	<script njs="true">
+		for (let i = 0; i < njs.users.length; i++) {
+			let user = njs.users[i];
+			nhtml(`<h1>njs author:</h1>`);
+			nhtml(`<p>${user.name}</p>`);
+		}
+	</script>
 </body>
 
 </html>
