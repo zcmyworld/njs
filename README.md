@@ -49,16 +49,15 @@
 
 ### 执行JavaScript
 
-    <n-script>
-        for(let i = 0; i <= 3; i++>) {
+    <script njs="true">
+        for (let i = 0; i <= 3; i++) {
             if (i = 0) {
-                nhtml(`<p>开始循环！</p>`)
+                nhtml(`<p>开始循环！</p>`);
                 break;
-            }
+            };
             nhtml(`<p>第${i}次输出</p>`)
         }
-    </n-script>
-
+    </script>
 
 ### 引入模板
 

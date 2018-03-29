@@ -7,10 +7,19 @@ app.use(njs)
 
 app.get('/', function (req, res) {
 	res.render('./template.html', {
-		title: 'hello, njs!'
+		title: 'Hello Njs!',
+		description: 'A casual template engine',
+		users: [{
+			name: 'Itgo'
+		}, {
+			name: 'zhicong'
+		}]
 	});
 });
 
-var server = app.listen(3000, function () {
-	console.log('Example app listening at http://%s:%s');
-});
+
+if (module.parent) {
+	module.exports = app;
+} else {
+	app.listen(3003);
+}
