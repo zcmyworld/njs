@@ -62,4 +62,4 @@
 
 ### 引入模板
 
-    <n-include value="dirname" />
+    <n-include value="/dirname" />
