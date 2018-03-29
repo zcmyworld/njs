@@ -14,11 +14,8 @@ module.exports = function (req, res, next) {
 
 	function parseNjsValue(data, args) {
 		let njs_value_reg = /<njs\svalue="(.*)".*\/>/g
-		let rs = data.replace(njs_value_reg, function (a, b, c, d) {
-			// console.log(a)//匹配的文本
-			// console.log(b)//对应的变量
-			// console.log(c)//位置
-			let njsValue = b;
+		let rs = data.replace(njs_value_reg, function (matchStr, matchKey, c, d) {
+			let njsValue = matchKey;
 			return args[njsValue]
 		});
 		return rs;
@@ -36,7 +33,6 @@ module.exports = function (req, res, next) {
 			return outputHtml;
 		});
 		return rs;
-
 	}
 	next();
 }

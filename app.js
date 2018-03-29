@@ -10,9 +10,11 @@ app.get('/', function (req, res) {
 		title: 'Hello Njs!',
 		description: 'A casual template engine',
 		users: [{
-			name: 'Itgo'
+			name: 'Itgo',
+			age: 10
 		}, {
-			name: 'zhicong'
+			name: 'zhicong',
+			age: 20
 		}]
 	});
 });

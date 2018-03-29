@@ -25,27 +25,6 @@
 
     <njs value=""/>
 
-### 循环数组对象
-
-设有对象：
-
-    var user_age = [{
-        name: bill,
-        age: 10
-    }, {
-        name: john,
-        age: 12
-    }, {
-        name: ben,
-        age: 11
-    }]
-
-模板写法：
-
-    <n-foreach key="user_age" value="user">
-        <p>用户名：<njs value="user.name"/></p>
-        <p>年龄： <njs value="user.age"/></p>
-    </n-foreach>
 
 ### 执行JavaScript
 
