@@ -4,7 +4,14 @@
 // console.log(data.match(reg))
 // let reg = /<script\snjs="true">([\s\S]*)<\/script>/
 
-let reg = /<n-foreach\skey="(.*?)"\sitem="(.*?)">([\s\S]*?)<\/n-foreach>/g
-let data = '<n-foreach key="hello" item="hello">he\nlloworld</n-foreach>'
-console.log(data)
-console.log(data.match(reg))
+// let reg = /&lt;hello&gt;&lt;\/hello&gt;/g
+// let reg = /&lt;/g
+let reg = /<tag>|<\/tag>/g
+let data = '<tag><hello><tag>final</tag></hello></tag><tag><hello></hello></tag>'
+// console.log(data)
+// console.log(data.match(reg))
+// console.log(reg.exec(data))
+while(rs = reg.exec(data)) {
+    console.log(reg.lastIndex)
+    console.log(rs)
+}

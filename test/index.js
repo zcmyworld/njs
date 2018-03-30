@@ -14,12 +14,6 @@ describe('Upload test start ...', function () {
 	after(function () {
 	})
 
-	afterEach(async function () {
-	})
-
-	beforeEach(async function () {
-	})
-
 	describe('njs value', function () {
 		request().get('/')
 			.end(function (err, res) {

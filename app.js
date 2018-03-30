@@ -11,10 +11,16 @@ app.get('/', function (req, res) {
 		description: 'A casual template engine',
 		users: [{
 			name: 'Itgo',
-			age: 10
+			age: 10,
+			friends: [],
+			books: ['book1', 'book2']
 		}, {
 			name: 'zhicong',
-			age: 20
+			age: 20,
+			friends: [{
+				name: 'Itgo'
+			}],
+			books: []
 		}]
 	});
 });

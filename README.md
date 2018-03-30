@@ -38,6 +38,19 @@
         }
     </script>
 
+### njs标签
+
+	<n-foreach key="users" item="user">
+		<n-item value="user.name"></n-item>
+		<n-item value="user.name"></n-item>
+		<n-foreach key="user.friends" item="friend">
+			<n-item value="friend.name"></n-item>
+		</n-foreach>
+		<n-foreach key="user.books" item="bookName">
+			<n-item value="bookName"></n-item>
+		</n-foreach>
+	</n-foreach>
+
 ### 引入模板
 
     <n-include value="/dirname" />

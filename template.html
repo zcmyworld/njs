@@ -27,6 +27,38 @@
 		}
 	</script>
 
+
+	<n-foreach key="users" item="user">
+		<span>用户名：</span>
+		<n-item value="user.name"></n-item>
+		<span>年龄：</span>
+		<n-item value="user.age"></n-item>
+		<n-foreach key="user.friends" item="friend">
+			<n-item value="friend.name"></n-item>
+		</n-foreach>
+		<n-foreach key="user.books" item="bookName">
+			<n-item value="bookName"></n-item>
+			<span>书本：</span>
+			<n-item value="user.name"></n-item>
+			<span>的拥有者是这个人</span>
+		</n-foreach>
+	</n-foreach>
+	<n-foreach key="users" item="user">
+		<span>用户名：</span>
+		<n-item value="user.name"></n-item>
+		<span>年龄：</span>
+		<n-item value="user.age"></n-item>
+		<n-foreach key="user.friends" item="friend">
+			<n-item value="friend.name"></n-item>
+		</n-foreach>
+		<n-foreach key="user.books" item="bookName">
+			<n-item value="bookName"></n-item>
+			<span>书本：</span>
+			<n-item value="user.name"></n-item>
+			<span>的拥有者是这个人</span>
+		</n-foreach>
+	</n-foreach>
+
 </body>
 
 </html>
